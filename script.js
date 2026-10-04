@@ -33,6 +33,7 @@
     var dots = Array.from(document.querySelectorAll("[data-carousel-slide]"));
     var caption = document.getElementById("carouselCaption");
     var count = document.getElementById("carouselCount");
+    var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     var activeSlide = 0;
 
     function showSlide(index) {
@@ -51,6 +52,10 @@
       if (caption) caption.textContent = slides[activeSlide].dataset.caption;
       if (count) count.textContent = String(activeSlide + 1).padStart(2, "0") + " / " + String(slides.length).padStart(2, "0");
     }
+
+    window.setInterval(function () {
+      if (!document.hidden && !prefersReducedMotion.matches) showSlide(activeSlide + 1);
+    }, 5000);
 
     carouselRegion.querySelector("[data-carousel-prev]").addEventListener("click", function () {
       showSlide(activeSlide - 1);
