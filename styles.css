@@ -24,6 +24,13 @@
 .photo-label{animation:label-float 5s ease-in-out infinite}
 .hero-note .note-stars{animation:star-twinkle 2.8s ease-in-out infinite}
 .button:active,.round-link:active,.carousel-controls>button:active{transform:scale(.96)}
+.video-section{padding:66px 0;background:#f0f3ea;border-top:1px solid #dde6d6;border-bottom:1px solid #dde6d6}
+.video-wrap{display:grid;gap:28px}
+.video-heading h2{margin:0;color:var(--forest);font-family:var(--display);font-size:clamp(34px,4vw,48px);line-height:1.1;letter-spacing:-.05em;font-weight:600}
+.video-heading h2 em{font-family:var(--serif);font-weight:400;letter-spacing:-.04em;color:#70906b}
+.video-card{background:#0f312d;padding:12px;border-radius:10px;box-shadow:0 22px 40px #123d3721}
+.clinic-video{display:block;width:100%;max-height:580px;border-radius:7px;background:#0a1f1c}
+@media(max-width:760px){.video-section{padding:50px 0}.video-card{padding:9px;border-radius:7px}.clinic-video{border-radius:5px}}
 @keyframes orbit-breathe{0%,100%{box-shadow:0 0 0 10px #d8ef8b55;transform:scale(1)}50%{box-shadow:0 0 0 15px #d8ef8b2b;transform:scale(1.035)}}
 @keyframes label-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
 @keyframes star-twinkle{0%,100%{opacity:.7;transform:scale(.94) rotate(-8deg)}50%{opacity:1;transform:scale(1.12) rotate(8deg)}}
